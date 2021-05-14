@@ -1,3 +1,13 @@
 {
-  "name": "nudge-buddy"
+  "name": "nudge-buddy-backend",
+  "scripts": {
+    "build": "script/build",
+    "start": "script/start"
+  },
+  "dependencies": {
+    "@types/node": "^15.3.0",
+    "apollo-server": "^2.24.0",
+    "graphql": "^15.5.0",
+    "typescript": "^4.2.4"
+  }
 }

@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "strict": true,
+    "target": "ES6",
+    "lib": ["ESNext"],
+    "module": "CommonJS",
+    "declaration": true,
+    "emitDeclarationOnly": false,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "declarationMap": true,
+    "types": [
+      "node",
+    ],
+    "baseUrl": "./",
+    "outDir": "./dist"
+  }
+}
