@@ -47,7 +47,9 @@ const serverPort = process.env.PORT || 4444
 
 // The `listen` method launches a web server.
 server.listen({
-  port: serverPort
+  port: serverPort,
+  playground: true,
+  introspection: true
 }).then(({ url }) => {
   console.log(`🚀  Server ready at ${url}`);
 });
