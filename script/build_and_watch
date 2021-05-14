@@ -1,0 +1,1 @@
+yarn nodemon -e js,ts --watch src --exec script/build_and_start

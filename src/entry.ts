@@ -1,3 +1,4 @@
+import { MemClient } from '@mem-labs/mem-node';
 import { ApolloServer, gql } from 'apollo-server';
 
 // A schema is a collection of type definitions (hence "typeDefs")
@@ -17,6 +18,7 @@ const typeDefs = gql`
   # case, the "books" query returns an array of zero or more Books (defined above).
   type Query {
     books: [Book]
+    healthCheck: Boolean
   }
 `;
 
@@ -31,11 +33,19 @@ const books = [
   },
 ];
 
+const memClient = new MemClient({
+  apiKey: "da843acd-8ab9-4fbc-8f5f-7dfe3ceab5de"
+})
+
 // Resolvers define the technique for fetching the types defined in the
 // schema. This resolver retrieves books from the "books" array above.
 const resolvers = {
   Query: {
     books: () => books,
+    healthCheck: async () => {
+      const result = await memClient.healthCheck()
+      return result
+    }
   },
 };
 
