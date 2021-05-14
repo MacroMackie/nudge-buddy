@@ -11,29 +11,42 @@ interface User {
   id: number;
   name: string;
   token: string
+  age?: number;
 }
 
 const typeDefs = gql`
   type SupabaseUser {
-    id: ID
-    name: String
-    token: String
+    id: ID!
+    name: String!
+    token: String!
+    age: Int
+  }
+
+  type CreateMemResult {
+    success: Boolean!
+    supabaseUser: SupabaseUser!
+    mem: String!
   }
 
   type CreateOrFetchAccountResult {
-    success: Boolean
-    supabaseUser: SupabaseUser
+    success: Boolean!
+    supabaseUser: SupabaseUser!
   }
 
   type Mutation {
     createOrFetchAccount(
       token: String!
       name: String
+      age: Int
     ): CreateOrFetchAccountResult
+
+    createMem(
+      token: String!
+    ): CreateMemResult
   }
 
   type Query {
-    healthCheck: Boolean
+    healthCheck: Boolean!
   }
 `;
 
@@ -41,11 +54,51 @@ const typeDefs = gql`
 
 const resolvers = {
   Mutation :{
-    createOrFetchAccount: async (
-      arg: any,
+    createMem: async (
+      _arg: any,
       inputs: { 
         token: string
-        name: string
+      }
+    ) => {
+      const memClient = new MemClient({
+        apiKey: inputs.token
+      })
+      
+      const success = memClient.healthCheck()
+
+      if (!success) {
+        throw new Error("Token was no good")
+      }
+
+      let { data: matchingUsers, error } = await supabase
+        .from('users')
+        .select("*")
+        .eq("token", inputs.token)
+
+      let matchingUser = matchingUsers?.[0]
+
+      if (!matchingUser) {
+        throw new Error("user not found")
+      }
+
+      const ageString = matchingUser.age ? `This user has an estimated ${78.54 - matchingUser.age} years remaining` : `This user's age is not set.`
+
+      const result = await memClient.createMem({
+        content: `The user's name is ${matchingUser.name} \n ${ageString}`
+      })
+
+      return {
+        success: true,
+        supabaseUser: matchingUser,
+        mem: JSON.stringify(result)
+      }
+    },
+    createOrFetchAccount: async (
+      _arg: any,
+      inputs: { 
+        token: string
+        name?: string
+        age?: number
       }
     ) => {
       console.log(inputs.token)
@@ -68,25 +121,35 @@ const resolvers = {
 
       let matchingUser = matchingUsers?.[0]
 
-      if (!matchingUser) {
+      if (matchingUser) {
+        await supabase
+        .from('users')
+          .update({ name: inputs.name, age: inputs.age })
+          .eq("token", inputs.token)
+
+       matchingUser = {
+         ...matchingUser,
+          name: inputs.name ?? matchingUser.name,
+          age: inputs.age ?? matchingUser.age,
+        }
+        
+      } else {
         const result = await supabase
           .from('users')
           .insert([
             {
               token: inputs.token,
-              name: inputs.name
+              name: inputs.name,
+              age: inputs.age
             },
           ])
 
         matchingUser = result.data?.[0]
 
         if (!matchingUser) {
-          throw new Error("Supabase Failed")
+          throw new Error("Supabase Failed during creation")
         }
       }
-
-    
-      console.log(matchingUser)
 
       return {
         success: true, 
