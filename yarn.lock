@@ -80,15 +80,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mem-labs/mem-node@npm:^0.0.2":
-  version: 0.0.2
-  resolution: "@mem-labs/mem-node@npm:0.0.2"
+"@mem-labs/mem-node@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@mem-labs/mem-node@npm:0.0.3"
   dependencies:
     "@graphql-typed-document-node/core": ^3.1.0
     graphql: ^15.5.0
     graphql-request: ^3.4.0
     ts-custom-error: ^3.2.0
-  checksum: 4d8b3fe1c8f1a44b78b55172e6a2a4f97190383a10e7109f9d4a132d15ec0d682996845a754830008689a67476cd76d67c5225f7d8d9bb638694f2996a9b0d31
+  checksum: ebc731205632ca93b7c214cc234ea6ee80a2dc4a685c8ea1f0470707048a9f59f90adc5d6d3db6110d2c608d2e57fbf8d99796aa5cf71d3f794fa7df4232670e
   languageName: node
   linkType: hard
 
@@ -2706,7 +2706,7 @@ fsevents@~2.3.1:
   version: 0.0.0-use.local
   resolution: "nudge-buddy-backend@workspace:."
   dependencies:
-    "@mem-labs/mem-node": ^0.0.2
+    "@mem-labs/mem-node": ^0.0.3
     "@supabase/supabase-js": ^1.11.13
     "@types/node": ^15.3.0
     apollo-server: ^2.24.0

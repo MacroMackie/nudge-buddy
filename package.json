@@ -5,7 +5,7 @@
     "start": "script/start"
   },
   "dependencies": {
-    "@mem-labs/mem-node": "^0.0.2",
+    "@mem-labs/mem-node": "^0.0.3",
     "@supabase/supabase-js": "^1.11.13",
     "@types/node": "^15.3.0",
     "apollo-server": "^2.24.0",

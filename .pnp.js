@@ -37,7 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {
           "packageLocation": "./",
           "packageDependencies": [
-            ["@mem-labs/mem-node", "npm:0.0.2"],
+            ["@mem-labs/mem-node", "npm:0.0.3"],
             ["@supabase/supabase-js", "npm:1.11.13"],
             ["@types/node", "npm:15.3.0"],
             ["apollo-server", "virtual:3d10e8560e4ebc6cb5dc8e25283e6f6d04bdaf2c9486cc4c9b88a0153f69a0b95f18252b52529e8641db2c7b99c82281546ccf95aa507c96f47c58e0a20a380b#npm:2.24.0"],
@@ -140,10 +140,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:b1e935a6c39b541fcd8088bdfbe3108b0cc08f7bf2319a025387fc610e735c9da370a0b75d0b825b3fa58fa1d8b650503897cdf8f05bb5e7a1e5685b80625ded#npm:3.1.0", {
-          "packageLocation": "./.yarn/$$virtual/@graphql-typed-document-node-core-virtual-9bdf38a2f8/0/cache/@graphql-typed-document-node-core-npm-3.1.0-626997e126-f1c90f749b.zip/node_modules/@graphql-typed-document-node/core/",
+        ["virtual:a15ef30f2643319dd1ebee92eba2479c3c2b774f728a88af4269cac790f103a8d1c827d6c903d88dc6ec75c489e39afec6d135d86c5603cdeb0889a1c3a05f10#npm:3.1.0", {
+          "packageLocation": "./.yarn/$$virtual/@graphql-typed-document-node-core-virtual-913c20a510/0/cache/@graphql-typed-document-node-core-npm-3.1.0-626997e126-f1c90f749b.zip/node_modules/@graphql-typed-document-node/core/",
           "packageDependencies": [
-            ["@graphql-typed-document-node/core", "virtual:b1e935a6c39b541fcd8088bdfbe3108b0cc08f7bf2319a025387fc610e735c9da370a0b75d0b825b3fa58fa1d8b650503897cdf8f05bb5e7a1e5685b80625ded#npm:3.1.0"],
+            ["@graphql-typed-document-node/core", "virtual:a15ef30f2643319dd1ebee92eba2479c3c2b774f728a88af4269cac790f103a8d1c827d6c903d88dc6ec75c489e39afec6d135d86c5603cdeb0889a1c3a05f10#npm:3.1.0"],
             ["@types/graphql", null],
             ["graphql", "npm:15.5.0"]
           ],
@@ -164,13 +164,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["@mem-labs/mem-node", [
-        ["npm:0.0.2", {
-          "packageLocation": "./.yarn/cache/@mem-labs-mem-node-npm-0.0.2-b1e935a6c3-4d8b3fe1c8.zip/node_modules/@mem-labs/mem-node/",
+        ["npm:0.0.3", {
+          "packageLocation": "./.yarn/cache/@mem-labs-mem-node-npm-0.0.3-a15ef30f26-ebc7312056.zip/node_modules/@mem-labs/mem-node/",
           "packageDependencies": [
-            ["@mem-labs/mem-node", "npm:0.0.2"],
-            ["@graphql-typed-document-node/core", "virtual:b1e935a6c39b541fcd8088bdfbe3108b0cc08f7bf2319a025387fc610e735c9da370a0b75d0b825b3fa58fa1d8b650503897cdf8f05bb5e7a1e5685b80625ded#npm:3.1.0"],
+            ["@mem-labs/mem-node", "npm:0.0.3"],
+            ["@graphql-typed-document-node/core", "virtual:a15ef30f2643319dd1ebee92eba2479c3c2b774f728a88af4269cac790f103a8d1c827d6c903d88dc6ec75c489e39afec6d135d86c5603cdeb0889a1c3a05f10#npm:3.1.0"],
             ["graphql", "npm:15.5.0"],
-            ["graphql-request", "virtual:b1e935a6c39b541fcd8088bdfbe3108b0cc08f7bf2319a025387fc610e735c9da370a0b75d0b825b3fa58fa1d8b650503897cdf8f05bb5e7a1e5685b80625ded#npm:3.4.0"],
+            ["graphql-request", "virtual:a15ef30f2643319dd1ebee92eba2479c3c2b774f728a88af4269cac790f103a8d1c827d6c903d88dc6ec75c489e39afec6d135d86c5603cdeb0889a1c3a05f10#npm:3.4.0"],
             ["ts-custom-error", "npm:3.2.0"]
           ],
           "linkType": "HARD",
@@ -2302,10 +2302,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],
           "linkType": "SOFT",
         }],
-        ["virtual:b1e935a6c39b541fcd8088bdfbe3108b0cc08f7bf2319a025387fc610e735c9da370a0b75d0b825b3fa58fa1d8b650503897cdf8f05bb5e7a1e5685b80625ded#npm:3.4.0", {
-          "packageLocation": "./.yarn/$$virtual/graphql-request-virtual-3c2094e930/0/cache/graphql-request-npm-3.4.0-404d79e135-d564874ff4.zip/node_modules/graphql-request/",
+        ["virtual:a15ef30f2643319dd1ebee92eba2479c3c2b774f728a88af4269cac790f103a8d1c827d6c903d88dc6ec75c489e39afec6d135d86c5603cdeb0889a1c3a05f10#npm:3.4.0", {
+          "packageLocation": "./.yarn/$$virtual/graphql-request-virtual-2afc9b91bd/0/cache/graphql-request-npm-3.4.0-404d79e135-d564874ff4.zip/node_modules/graphql-request/",
           "packageDependencies": [
-            ["graphql-request", "virtual:b1e935a6c39b541fcd8088bdfbe3108b0cc08f7bf2319a025387fc610e735c9da370a0b75d0b825b3fa58fa1d8b650503897cdf8f05bb5e7a1e5685b80625ded#npm:3.4.0"],
+            ["graphql-request", "virtual:a15ef30f2643319dd1ebee92eba2479c3c2b774f728a88af4269cac790f103a8d1c827d6c903d88dc6ec75c489e39afec6d135d86c5603cdeb0889a1c3a05f10#npm:3.4.0"],
             ["@types/graphql", null],
             ["cross-fetch", "npm:3.1.4"],
             ["extract-files", "npm:9.0.0"],
@@ -3347,7 +3347,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["nudge-buddy-backend", "workspace:."],
-            ["@mem-labs/mem-node", "npm:0.0.2"],
+            ["@mem-labs/mem-node", "npm:0.0.3"],
             ["@supabase/supabase-js", "npm:1.11.13"],
             ["@types/node", "npm:15.3.0"],
             ["apollo-server", "virtual:3d10e8560e4ebc6cb5dc8e25283e6f6d04bdaf2c9486cc4c9b88a0153f69a0b95f18252b52529e8641db2c7b99c82281546ccf95aa507c96f47c58e0a20a380b#npm:2.24.0"],

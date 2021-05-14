@@ -37,9 +37,7 @@ const typeDefs = gql`
   }
 `;
 
-const memClient = new MemClient({
-  apiKey: "da843acd-8ab9-4fbc-8f5f-7dfe3ceab5de"
-})
+
 
 const resolvers = {
   Mutation :{
@@ -98,6 +96,10 @@ const resolvers = {
   },
   Query: {
     healthCheck: async () => {
+
+const memClient = new MemClient({
+      apiKey: "da843acd-8ab9-4fbc-8f5f-7dfe3ceab5de"
+    })
       const result = await memClient.healthCheck()
       
       return result
